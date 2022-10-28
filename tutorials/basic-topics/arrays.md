@@ -73,6 +73,23 @@ for i in range(len(basketball_matches)):
 | Remove           | $$O(N)$$   | When we remove an element in the middle of the array, it takes O(N) time. The whole array needs to be restructured to replace the missing gap of the replaced element.                                                                  |
 | Len              | $$O(1)$$   | This may seem like to be O(N) as we have to go through the whole array to check its length. However, checking the length of an array in many languages should be pre-computed in their data structures, so it only takes constant time. |
 
+```C++ ```
+
+Arrays can be defined as std::array<data_type>(n), std::vector<data_type>. 
+Some useful STL functions which would help while dealing with vector problems in Leetcode 
+```
+*max_element (first index, last index);
+*min_element (first index, last index);
+
+Time complexity : O(n)
+
+usage example:
+vector<int> inp{100,200,300,400,200};
+int max_value = *max_element(begin(inp), end(inp));  //max_value = 400;
+inp.push_back(3000);
+max_value = *max_element(begin(inp), end(inp));   //max_value = 3000;
+```
+
 export const suggestedProblems = [
   {
     "problemName": "1480 - Running Sum of 1d Array",
